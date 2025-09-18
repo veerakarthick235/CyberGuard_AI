@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberGuard AI - Phishing Simulator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="background-animation"></div>
+
+    <div class="container">
+        <header>
+            <h1>CyberGuard AI Simulator</h1>
+            <div class="score-display">
+                Score: <span id="score">0</span>
+            </div>
+        </header>
+
+        <div id="email-view" class="email-view">
+            <div id="loader" class="loader">Initializing AI...</div>
+            <div class="email-content hidden">
+                <div class="email-header">
+                    <strong>From:</strong> <span id="email-sender"></span><br>
+                    <strong>Subject:</strong> <span id="email-subject"></span>
+                </div>
+                <div class="email-body" id="email-body"></div>
+            </div>
+        </div>
+
+        <div id="action-buttons" class="action-buttons">
+            <button id="safe-btn" class="btn btn-safe">✔️ Mark as Safe</button>
+            <button id="phish-btn" class="btn btn-phish">🎣 Mark as Phishing</button>
+        </div>
+
+        <div id="feedback-view" class="feedback-view">
+            <h3 id="feedback-title"></h3>
+            <div id="attack-category" class="attack-category-tag"></div>
+            <p id="feedback-text"></p>
+            <button id="next-btn" class="btn btn-next">Next Email →</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
