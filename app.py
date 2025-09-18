@@ -1,4 +1,3 @@
-# app.py
 import os
 import google.generativeai as genai
 from flask import Flask, request, jsonify, render_template
@@ -77,4 +76,5 @@ def analyze_choice():
         return jsonify({"error": "Failed to analyze choice"}), 500
 
 if __name__ == '__main__':
+
     app.run(debug=True)
