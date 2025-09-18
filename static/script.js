@@ -1,4 +1,3 @@
-// static/script.js
 document.addEventListener('DOMContentLoaded', () => {
     // --- DOM Elements ---
     const scoreEl = document.getElementById('score');
@@ -113,4 +112,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Initial Load ---
     fetchNewEmail();
+
 });
